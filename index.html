@@ -454,13 +454,13 @@
   <script>
     (function(){
       var splash = document.getElementById('introSplash');
-      // Start fade-out after 900ms (logo visible ~0.75s + 0.15s entrance)
+      // Start fade-out after 3500ms
       setTimeout(function(){
         splash.classList.add('fade-out');
         splash.addEventListener('transitionend', function(){
           splash.classList.add('gone');
         }, { once: true });
-      }, 900);
+      }, 3500);
     })();
   </script>
 </body>
