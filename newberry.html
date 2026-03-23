@@ -5,21 +5,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>South Carolina Transportation Forum | Pivai</title>
+<title>Newberry, SC Field Demo | Pivai</title>
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="about.css">
 <link rel="stylesheet" href="contact.css">
 <link rel="stylesheet" href="news.css">
 
-<!-- Page-specific polish (button + slight spacing) -->
 <style>
   .event-btn {
     display: inline-flex;
@@ -59,13 +58,74 @@
     transform: translateX(3px);
   }
 
-  /* optional: keep the content block readable + consistent */
-  .event-content{
-    margin-top:30px;
-    max-width:900px;
-    line-height:1.7;
-    color:#2d3b45;
+  .event-content {
+    margin-top: 30px;
+    max-width: 900px;
+    line-height: 1.7;
+    color: #2d3b45;
   }
+
+  /* Slider */
+  .demo-slider {
+    position: relative;
+    margin: 40px 0;
+    max-width: 900px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0c1a2a;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  }
+  .slider-track {
+    display: flex;
+    transition: transform .5s cubic-bezier(.4,0,.2,1);
+  }
+  .slider-track img {
+    min-width: 100%;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+  }
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(12,26,42,0.55);
+    border: none;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s;
+    z-index: 2;
+  }
+  .slider-btn:hover { background: rgba(12,26,42,0.85); }
+  .slider-btn.prev { left: 14px; }
+  .slider-btn.next { right: 14px; }
+  .slider-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  .slider-dots button {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.45);
+    cursor: pointer;
+    padding: 0;
+    transition: background .2s;
+  }
+  .slider-dots button.active { background: #fff; }
 </style>
 
 </head>
@@ -75,15 +135,12 @@
 <!-- HEADER -->
 <header class="site-header" role="banner">
   <div class="header-grid" id="headerGrid">
-    <!-- Logo -->
     <a class="brand" href="index.html" aria-label="PivaiTech home">
       <img src="images/newlogo.png" alt="PivaiTech logo" />
     </a>
 
-    <!-- NAV (click-to-open) -->
     <nav class="primary-nav" role="navigation" aria-label="Main Navigation">
       <ul class="menu" role="menubar">
-        <!-- COMPANY (3-column) -->
         <li class="menu-item mega" role="none">
           <button class="dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">
             <span class="label">Company</span>
@@ -94,32 +151,23 @@
           </button>
           <div class="mega-panel" role="menu" aria-label="Company">
             <div class="mega3">
-              <!-- Left: title + short description -->
               <div class="col intro">
                 <h3>Company</h3>
                 <p>Pioneering AI-powered infrastructure with a global vision.</p>
               </div>
-
-              <!-- Middle: big links driving the preview -->
               <div class="col links">
-                <a class="mega-link is-active" href="about.html"
-                  data-preview-img="images/newlogo.png" data-preview-title="About Us"
-                  data-preview-desc="Who we are, what we do, and how we build.">About Us</a>
-
+                <a class="mega-link is-active" href="about.html" data-preview-img="images/newlogo.png"
+                  data-preview-title="About Us" data-preview-desc="Who we are, what we do, and how we build.">About Us</a>
                 <a class="mega-link" href="team.html" data-preview-img="images/newlogo.png"
                   data-preview-title="Our people"
                   data-preview-desc="Meet the leadership and the builders behind PivaiTech.">Our Team</a>
-
                 <a class="mega-link" href="news.html" data-preview-img="images/newlogo.png"
                   data-preview-title="News & Events"
                   data-preview-desc="Discover the latest announcements and where to meet us.">News & Events</a>
-
                 <a class="mega-link" href="careers.html" data-preview-img="images/newlogo.png"
                   data-preview-title="Careers"
                   data-preview-desc="Help us design the next decade of intelligent infrastructure.">Careers</a>
               </div>
-
-              <!-- Right: live preview -->
               <div class="col preview">
                 <figure>
                   <img src="images/newlogo.png" alt="PivaiTech logo">
@@ -133,7 +181,6 @@
           </div>
         </li>
 
-        <!-- PRODUCTS (3-column) -->
         <li class="menu-item mega" role="none">
           <button class="dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">
             <span class="label">Products</span>
@@ -148,17 +195,14 @@
                 <h3>Products</h3>
                 <p>Innovative AI solutions that redefine accuracy and control.</p>
               </div>
-
               <div class="col links">
-                <a class="mega-link is-active" href="roadmap.html"
-                  data-preview-img="images/Roadmap.jpeg" data-preview-title="Roadmap"
+                <a class="mega-link is-active" href="roadmap.html" data-preview-img="images/Roadmap.jpeg"
+                  data-preview-title="Roadmap"
                   data-preview-desc="Advanced AI-powered navigation and route intelligence.">Roadmap</a>
-
                 <a class="mega-link" href="signmap.html" data-preview-img="images/sign3.png"
                   data-preview-title="Signmap"
                   data-preview-desc="Real-time road sign detection and classification with precision vision.">Signmap</a>
               </div>
-
               <div class="col preview">
                 <figure>
                   <img src="images/Roadmap.jpeg" alt="">
@@ -172,7 +216,6 @@
           </div>
         </li>
 
-        <!-- CASE STUDIES — plain link (no dropdown) -->
         <li class="menu-item" role="none">
           <a class="dropdown-toggle" href="case-studies.html" role="menuitem">
             <span class="label">Case studies</span>
@@ -181,7 +224,6 @@
       </ul>
     </nav>
 
-    <!-- Right: Language + minimal Contact -->
     <div class="right-controls">
       <div class="lang dropdown">
         <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
@@ -198,23 +240,19 @@
           <li role="none"><button role="menuitem" data-lang="IT">IT</button></li>
         </ul>
       </div>
-
       <a class="btn ghost" href="contact.html">Contact</a>
     </div>
   </div>
 
-  <!-- Thin divider under header -->
   <div class="rule rule-header"></div>
 
-  <!-- Tagline -->
   <div class="tagline c-tagline">
     <div class="tagline-inner c-tagline-inner">
-      <h1 class="c-title">Conference.</h1>
-      <p class="c-subtitle">South Carolina Transportation Forum</p>
+      <h1 class="c-title">Field Demo.</h1>
+      <p class="c-subtitle">Newberry, South Carolina</p>
     </div>
   </div>
 
-  <!-- Thin divider under tagline -->
   <div class="rule rule-tagline"></div>
 </header>
 
@@ -226,74 +264,83 @@
 <!-- MAIN -->
 <main>
 
-  <!-- Breadcrumb (reveal on scroll) -->
   <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
     <a href="index.html">Home</a>
     <span>›</span>
     <a href="news.html">News</a>
     <span>›</span>
-    <span class="current">South Carolina Transportation Forum</span>
+    <span class="current">Newberry, SC Field Demo</span>
   </nav>
 
-  <!-- Main section reveal -->
   <section class="news wrap" data-reveal>
 
-    <h2>South Carolina Transportation Forum</h2>
+    <h2>Newberry, SC Field Demo</h2>
 
-    <p style="margin-top:10px;color:#5a6675;" data-reveal>
-      March 31 – April 1, 2026
-    </p>
+    <p style="margin-top:10px;color:#5a6675;">March 2026</p>
 
-    <!-- Stagger content: paragraphs reveal one-by-one -->
     <div class="event-content" data-reveal-stagger>
 
-      <h3 style="margin-bottom:15px;" data-reveal>
-        Meet PIVAI at the 2026 South Carolina Transportation Forum
-      </h3>
+      <h3 style="margin-bottom:15px;">PIVAI Takes SignMap to the Field in Newberry, SC</h3>
 
       <p>
-        PIVAI LLC will be exhibiting at the <strong>2026 South Carolina Transportation Forum</strong>,
-        held March 31–April 1 at the Columbia Metropolitan Convention Center.
-        We invite transportation professionals, engineers, and infrastructure managers
-        to visit our booth and learn how PIVAI’s AI-powered inspection platform helps
-        agencies efficiently detect and map pavement defects such as potholes, cracks,
-        and signage.
+        In March 2026, PIVAI conducted a hands-on field demonstration in <strong>Newberry, South Carolina</strong>,
+        putting our AI-powered inspection platform to the test on real roads alongside SCDOT officials and
+        local infrastructure managers.
       </p>
 
       <p>
-        Our technology combines advanced computer vision with vehicle-mounted sensors
-        to automate roadway condition assessment and support data-driven maintenance
-        decisions.
+        The demo showcased <strong>SignMap</strong>'s real-time pavement defect detection — identifying
+        potholes, cracking, and surface deterioration as the vehicle drove through Newberry's road network —
+        as well as automated traffic sign recognition.
       </p>
 
       <p>
-        Stop by our booth to see how PIVAI is helping modernize infrastructure inspection
-        across South Carolina.
+        Attendees were able to observe live data collection, on-device AI processing, and the
+        interactive mapping dashboard that aggregates field data into actionable maintenance reports.
+      </p>
+
+      <p>
+        This demonstration marks an important milestone in PIVAI's mission to bring affordable,
+        scalable AI inspection tools to municipalities and state DOTs across the Southeast.
       </p>
 
     </div>
 
-    <!-- Button reveal -->
+    <!-- Photo Slider -->
+    <div class="demo-slider" data-reveal aria-label="Field demo photos">
+      <div class="slider-track" id="sliderTrack">
+        <img src="images/newberry_demo.jpg" alt="Newberry field demo — on-site inspection">
+        <img src="images/newberry_demo_2.jpg" alt="Newberry field demo — RoadMap in action">
+        <img src="images/newberry_demo_3.jpg" alt="Newberry field demo — team and equipment">
+      </div>
+
+      <button class="slider-btn prev" id="sliderPrev" aria-label="Previous photo">&#8592;</button>
+      <button class="slider-btn next" id="sliderNext" aria-label="Next photo">&#8594;</button>
+
+      <div class="slider-dots" id="sliderDots">
+        <button class="active" aria-label="Photo 1"></button>
+        <button aria-label="Photo 2"></button>
+        <button aria-label="Photo 3"></button>
+      </div>
+    </div>
+
     <div style="margin-top:36px;max-width:900px;display:flex;gap:10px;flex-wrap:wrap;" data-reveal>
       <a href="news.html" class="event-btn">
         &#8592; Back to News
       </a>
-      <a href="https://scltap.org/2026-south-carolina-transportation-forum/"
-         class="event-btn primary"
-         target="_blank" rel="noopener">
-        Visit Official Event Page <span class="arrow" aria-hidden="true">→</span>
+      <a href="case-studies.html#case-study" class="event-btn primary">
+        View Newberry Case Study <span class="arrow" aria-hidden="true">→</span>
       </a>
     </div>
 
   </section>
 
-  <!-- Get in touch reveal -->
   <section class="get-in-touch" data-reveal>
     <div class="get-in-touch__inner">
-      <h2>Let’s Get in Touch</h2>
+      <h2>Let's Get in Touch</h2>
       <p>
         Have questions or want to explore collaboration opportunities?
-        We’d love to hear from you - let’s make smarter, safer, and more efficient
+        We'd love to hear from you - let's make smarter, safer, and more efficient
         transportation together.
       </p>
       <a href="contact.html" class="btn-ghost">Get in Touch</a>
@@ -301,8 +348,6 @@
   </section>
 
 </main>
-
-<!-- FOOTER reveal -->
   <footer class="footer" data-reveal>
     <div class="footer-top">
       <div>
@@ -360,6 +405,24 @@
   </footer>
 
 <script src="script.js"></script>
+<script>
+  (function () {
+    const track = document.getElementById('sliderTrack');
+    const dots = document.querySelectorAll('#sliderDots button');
+    const total = dots.length;
+    let current = 0;
+
+    function goTo(index) {
+      current = (index + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    document.getElementById('sliderPrev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('sliderNext').addEventListener('click', () => goTo(current + 1));
+    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+  })();
+</script>
 
 </body>
 </html>

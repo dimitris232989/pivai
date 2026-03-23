@@ -114,6 +114,17 @@
   display: block;
 }
 
+/* Mission logo (row A) — black like nav preview cards */
+.mission__row--a .mission__media img {
+  object-fit: contain;
+  filter: brightness(0);
+}
+
+/* Mission signmap (row B) — show full image, no crop */
+.mission__row--b .mission__media img {
+  object-fit: contain;
+}
+
 /* On mobile: slightly taller ratio feels better */
 @media (max-width: 700px) {
   :root {

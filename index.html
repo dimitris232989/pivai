@@ -21,11 +21,16 @@
 </head>
 
 <body>
+  <!-- INTRO SPLASH -->
+  <div class="intro-splash" id="introSplash">
+    <img src="images/pivailogo.png" alt="Pivai" class="intro-logo">
+  </div>
+
   <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="header-grid" id="headerGrid">
       <a class="brand" href="index.html" aria-label="PivaiTech home">
-        <img src="images/pivailogo.png" alt="PivaiTech logo" />
+        <img src="images/newlogo.png" alt="PivaiTech logo" />
       </a>
 
       <nav class="primary-nav" role="navigation" aria-label="Main Navigation">
@@ -47,26 +52,26 @@
                 </div>
 
                 <div class="col links">
-                  <a class="mega-link is-active" href="about.html" data-preview-img="images/pivailogo.png"
+                  <a class="mega-link is-active" href="about.html" data-preview-img="images/newlogo.png"
                     data-preview-title="About Us" data-preview-desc="Who we are, what we do, and how we build.">About
                     Us</a>
 
-                  <a class="mega-link" href="team.html" data-preview-img="images/pivailogo.png"
+                  <a class="mega-link" href="team.html" data-preview-img="images/newlogo.png"
                     data-preview-title="Our people"
                     data-preview-desc="Meet the leadership and the builders behind PivaiTech.">Our Team</a>
 
-                  <a class="mega-link" href="news.html" data-preview-img="images/pivailogo.png"
+                  <a class="mega-link" href="news.html" data-preview-img="images/newlogo.png"
                     data-preview-title="News & Events"
                     data-preview-desc="Discover the latest announcements and where to meet us.">News & Events</a>
 
-                  <a class="mega-link" href="careers.html" data-preview-img="images/pivailogo.png"
+                  <a class="mega-link" href="careers.html" data-preview-img="images/newlogo.png"
                     data-preview-title="Careers"
                     data-preview-desc="Help us design the next decade of intelligent infrastructure.">Careers</a>
                 </div>
 
                 <div class="col preview">
                   <figure>
-                    <img src="images/pivailogo.png" alt="PivaiTech logo">
+                    <img src="images/newlogo.png" alt="PivaiTech logo">
                     <figcaption>
                       <h4>About Us</h4>
                       <p>Who we are, what we do, and how we build.</p>
@@ -341,7 +346,28 @@
               Pivai will participate in the South Carolina Transportation Forum.
             </p>
 
-            <a class="read" href="https://scltap.org/2026-south-carolina-transportation-forum/" target="_blank">
+            <a class="read" href="scltap.html">
+              Read More
+            </a>
+          </article>
+
+
+          <article class="news-item">
+            <a class="news-item__media" href="newberry.html">
+              <img src="images/newberry_demo.jpg" alt="Newberry, SC Field Demo" loading="lazy">
+            </a>
+
+            <h3>
+              <a href="newberry.html">
+                Newberry, SC Field Demo (March 2026)
+              </a>
+            </h3>
+
+            <p class="excerpt">
+              Pivai participated in the Newberry, SC Field Demo.
+            </p>
+
+            <a class="read" href="newberry.html" target="_blank">
               Read More
             </a>
           </article>
@@ -375,7 +401,7 @@
         <ul>
           <li><a href="about.html">About Us</a></li>
           <li><a href="team.html">Our Team</a></li>
-          <li><a href="news.html">News & Events</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
           <li><a href="careers.html">Careers</a></li>
         </ul>
       </div>
@@ -400,7 +426,7 @@
     <div class="footer-bottom">
       <div class="footer-col logo-col">
         <a href="index.html" aria-label="PivaiTech home">
-          <img src="images/pivailogo.png" alt="PivaiTech Logo">
+          <img src="images/newlogo.png" alt="PivaiTech Logo">
         </a>
       </div>
 
@@ -424,6 +450,19 @@
   </script>
 
   <script src="script.js"></script>
+
+  <script>
+    (function(){
+      var splash = document.getElementById('introSplash');
+      // Start fade-out after 900ms (logo visible ~0.75s + 0.15s entrance)
+      setTimeout(function(){
+        splash.classList.add('fade-out');
+        splash.addEventListener('transitionend', function(){
+          splash.classList.add('gone');
+        }, { once: true });
+      }, 900);
+    })();
+  </script>
 </body>
 
 </html>

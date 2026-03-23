@@ -146,187 +146,6 @@
       gap: 10px;
     }
 
-    .cs-control-stack {
-      display: grid;
-      gap: 16px;
-      width: 100%;
-    }
-
-    .cs-filter-bar {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .cs-filter-label {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      color: #516174;
-    }
-
-    .cs-filter-chip {
-      border: 1px solid rgba(12, 26, 42, .14);
-      background: #fff;
-      color: #0c1a2a;
-      border-radius: 999px;
-      padding: 9px 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background .2s ease, color .2s ease, border-color .2s ease;
-    }
-
-    .cs-filter-chip.is-active {
-      background: #0c1a2a;
-      color: #fff;
-      border-color: #0c1a2a;
-    }
-
-    .cs-summary {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .cs-toolbar {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .cs-data-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(360px, .95fr);
-      gap: 22px;
-      align-items: stretch;
-      margin-top: 22px;
-    }
-
-    .cs-stat {
-      border-radius: 14px;
-      background: linear-gradient(180deg, rgba(255, 255, 255, .98), rgba(241, 245, 249, .96));
-      border: 1px solid rgba(12, 26, 42, .08);
-      padding: 16px 18px;
-    }
-
-    .cs-stat-label {
-      display: block;
-      color: #6d7b90;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-    }
-
-    .cs-stat-value {
-      display: block;
-      margin-top: 8px;
-      color: #0c1a2a;
-      font-size: clamp(22px, 3vw, 30px);
-      font-family: "Space Grotesk", system-ui, sans-serif;
-      font-weight: 600;
-    }
-
-    .cs-table-wrap {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(12, 26, 42, .08);
-      background: rgba(255, 255, 255, .92);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, .06);
-      min-height: 64vh;
-      max-height: 64vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cs-table-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: center;
-      padding: 18px 20px;
-      border-bottom: 1px solid rgba(12, 26, 42, .08);
-      background: #f8fafc;
-    }
-
-    .cs-table-head h3 {
-      margin: 0;
-      color: #0c1a2a;
-      font-size: 20px;
-    }
-
-    .cs-table-meta {
-      color: #6d7b90;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .cs-table-scroll {
-      overflow: auto;
-      flex: 1;
-    }
-
-    .cs-table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 100%;
-    }
-
-    .cs-table th,
-    .cs-table td {
-      padding: 13px 14px;
-      text-align: left;
-      border-bottom: 1px solid rgba(12, 26, 42, .08);
-      vertical-align: middle;
-    }
-
-    .cs-table th {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      color: #6d7b90;
-      background: #f8fafc;
-    }
-
-    .cs-table tr[data-row-index] {
-      cursor: pointer;
-    }
-
-    .cs-table tr[data-row-index]:hover {
-      background: rgba(12, 26, 42, .04);
-    }
-
-    .cs-table tr.is-selected {
-      background: rgba(12, 26, 42, .07);
-    }
-
-    .cs-class-tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .cs-class-tag {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      padding: 5px 10px;
-      font-size: 12px;
-      font-weight: 700;
-      background: rgba(12, 26, 42, .08);
-      color: #0c1a2a;
-    }
-
-    .cs-empty {
-      padding: 28px 20px;
-      text-align: center;
-      color: #6d7b90;
-      font-weight: 600;
-    }
-
     .view-img-btn {
       display: inline-flex;
       align-items: center;
@@ -517,30 +336,12 @@
     }
 
     @media (max-width: 900px) {
-      .cs-summary {
-        grid-template-columns: 1fr;
-      }
-
-      .cs-data-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .cs-table-wrap {
-        min-height: 420px;
-        max-height: 420px;
-      }
-
       .frame-grid {
         grid-template-columns: 1fr;
       }
 
       .frame-img {
         max-height: 48vh;
-      }
-
-      .cs-table-head {
-        flex-direction: column;
-        align-items: flex-start;
       }
     }
   </style>
@@ -703,7 +504,7 @@
       <span class="current">Case Studies</span>
     </nav>
 
-    <section id="case-study" class="cs-map-wrap" data-reveal>
+    <section class="cs-map-wrap" data-reveal>
       <header class="cs-head">
         <h2>Interactive Map</h2>
         <span class="underline"></span>
@@ -711,73 +512,18 @@
       </header>
 
       <div class="cs-controls">
-        <div class="cs-control-stack">
-          <div class="cs-control-row">
-            <div class="cs-toolbar">
-              <div id="datasetSelectMount" class="cs-select-wrap"></div>
-              <button type="button" id="resetView" class="cs-btn">Reset Map View</button>
-            </div>
+        <div class="cs-control-row">
+          <button type="button" id="resetView" class="cs-btn">Reset Map View</button>
 
-            <div class="cs-legend">
-              <span class="cs-pill"><span class="dot dot-strong"></span> Frames with detections</span>
-              <span id="csStatus" class="cs-status">Loading...</span>
-            </div>
-          </div>
-
-          <div id="classFilters" class="cs-filter-bar">
-            <span class="cs-filter-label">Filter classes</span>
-          </div>
-
-          <div class="cs-summary">
-            <div class="cs-stat">
-              <span class="cs-stat-label">Visible Frames</span>
-              <span id="visibleFramesStat" class="cs-stat-value">0</span>
-            </div>
-            <div class="cs-stat">
-              <span class="cs-stat-label">Visible Detections</span>
-              <span id="visibleDetectionsStat" class="cs-stat-value">0</span>
-            </div>
-            <div class="cs-stat">
-              <span class="cs-stat-label">Active Classes</span>
-              <span id="activeClassesStat" class="cs-stat-value">0</span>
-            </div>
+          <div class="cs-legend">
+            <span class="cs-pill"><span class="dot dot-strong"></span> Positive detection</span>
+            <span class="cs-pill"><span class="dot dot-soft"></span> Negative detection</span>
+            <span id="csStatus" class="cs-status">Loading...</span>
           </div>
         </div>
       </div>
 
-      <div class="cs-data-grid">
-        <div id="cs-map" class="cs-map"></div>
-
-        <section class="cs-table-wrap" aria-label="Detection frames table">
-          <div class="cs-table-head">
-            <div>
-              <h3>Detection Frames</h3>
-              <div class="cs-table-meta">Select a row or pin to inspect the RGB and depth preview.</div>
-            </div>
-            <div id="tableMeta" class="cs-table-meta">Loading...</div>
-          </div>
-
-          <div class="cs-table-scroll">
-            <table class="cs-table">
-              <thead>
-                <tr>
-                  <th>Frame</th>
-                  <th>Classes</th>
-                  <th>Detections</th>
-                  <th>Latitude</th>
-                  <th>Longitude</th>
-                  <th>Preview</th>
-                </tr>
-              </thead>
-              <tbody id="resultsTableBody">
-                <tr>
-                  <td colspan="6" class="cs-empty">Loading...</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </div>
+      <div id="cs-map" class="cs-map"></div>
     </section>
   </main>
 
@@ -888,13 +634,6 @@
     (async function () {
       const statusEl = document.getElementById("csStatus");
       const resetBtn = document.getElementById("resetView");
-      const classFiltersEl = document.getElementById("classFilters");
-      const datasetSelectMount = document.getElementById("datasetSelectMount");
-      const visibleFramesStatEl = document.getElementById("visibleFramesStat");
-      const visibleDetectionsStatEl = document.getElementById("visibleDetectionsStat");
-      const activeClassesStatEl = document.getElementById("activeClassesStat");
-      const tableMetaEl = document.getElementById("tableMeta");
-      const resultsTableBody = document.getElementById("resultsTableBody");
 
       const modal = document.getElementById("frameModal");
       const modalTitle = document.getElementById("modalTitle");
@@ -914,13 +653,9 @@
 
       let allDatasets = [];
       let currentEvents = [];
-      let visibleEvents = [];
       let currentDatasetId = "all";
       let lastDetectionsForOverlay = [];
       let currentIndex = -1;
-      let activeClasses = new Set();
-      let availableClasses = [];
-      let selectedFrameId = null;
 
       function pad6(n) {
         const s = String(n);
@@ -948,20 +683,6 @@
         if (depth) parts.push(`depth=${depth}m`);
         if (sizeStr) parts.push(`size=${sizeStr}`);
         return parts.join(" | ");
-      }
-
-      function normalizeClassName(label) {
-        const value = String(label || "").trim().toLowerCase();
-        if (!value) return "unknown";
-        if (value === "potholes") return "pothole";
-        if (value === "signs") return "sign";
-        if (value === "cracks") return "crack";
-        return value;
-      }
-
-      function displayClassName(name) {
-        const value = normalizeClassName(name);
-        return value.charAt(0).toUpperCase() + value.slice(1);
       }
 
       function datasetRootFromEventsPath(events_path) {
@@ -1002,8 +723,7 @@
         const dets = Array.isArray(obj.detections) ? obj.detections : [];
 
         const det_list = dets.map(d => ({
-          label: displayClassName(d.label ?? d.class ?? "Sign"),
-          class_key: normalizeClassName(d.label ?? d.class ?? "Sign"),
+          label: d.label ?? d.class ?? "Sign",
           score: d.score,
           depth_m: d.depth_m,
           size_m: (Number.isFinite(d.width_m) && Number.isFinite(d.height_m)) ? [d.width_m, d.height_m] : undefined,
@@ -1038,8 +758,7 @@
           // keep around if you need root later
           _dataset_root: root,
 
-          thumb,
-          classes: Array.from(new Set(det_list.map(d => d.class_key))).sort()
+          thumb
         };
       }
 
@@ -1102,17 +821,11 @@
 
           ctx.strokeRect(rx, ry, rw, rh);
 
-          const lbl = `${d.label ?? "Detection"} ${idx + 1}`;
+          const lbl = `Sign${idx + 1}`;
           ctx.font = "bold 16px sans-serif";
           ctx.fillStyle = "#ff3b30";
           ctx.fillText(lbl, rx + 4, Math.max(18, ry - 6));
         });
-      }
-
-      function getModalDetectionsForEvent(eventItem) {
-        const source = Array.isArray(eventItem?.det_list) ? eventItem.det_list : [];
-        if (activeClasses.size === 0) return source;
-        return source.filter(d => activeClasses.has(d.class_key));
       }
 
       function cropToDataURL(imgEl, bbox) {
@@ -1205,7 +918,6 @@
       });
 
       window.addEventListener("resize", () => {
-        map.invalidateSize();
         if (modal.getAttribute("aria-hidden") === "false") {
           setupCanvasToMatchImageFor(bboxCanvas, modalImg);
           drawBBoxesOn(bboxCanvas, modalImg, lastDetectionsForOverlay);
@@ -1235,97 +947,36 @@
       }
 
       resetBtn.addEventListener("click", () => {
-        const bounds = computeBounds(visibleEvents);
+        const bounds = computeBounds(currentEvents);
         if (bounds) map.fitBounds(bounds.pad(0.2));
       });
 
-      function markerStyle(e) {
-        const classes = new Set(e.classes || []);
-        if (classes.has("pothole")) {
-          return { radius: 7, weight: 1.5, color: "#9f1239", fillColor: "#e11d48", fillOpacity: 0.9 };
-        }
-        if (classes.has("sign")) {
-          return { radius: 6, weight: 1.5, color: "#92400e", fillColor: "#f59e0b", fillOpacity: 0.88 };
-        }
-        return { radius: 5, weight: 1.2, color: "#0f766e", fillColor: "#14b8a6", fillOpacity: 0.88 };
-      }
-
-      function getFilteredEvents() {
-        if (activeClasses.size === 0) return currentEvents.slice();
-        return currentEvents.filter(e => Array.isArray(e.classes) && e.classes.some(cls => activeClasses.has(cls)));
-      }
-
-      function countDetections(list) {
-        return list.reduce((sum, e) => sum + Number(e.detections || 0), 0);
-      }
-
-      function renderClassFilters() {
-        classFiltersEl.innerHTML = '<span class="cs-filter-label">Filter classes</span>';
-
-        const allBtn = document.createElement("button");
-        allBtn.type = "button";
-        allBtn.className = `cs-filter-chip${activeClasses.size === 0 ? " is-active" : ""}`;
-        allBtn.textContent = `All (${currentEvents.length})`;
-        allBtn.addEventListener("click", () => {
-          activeClasses = new Set();
-          syncView();
-        });
-        classFiltersEl.appendChild(allBtn);
-
-        availableClasses.forEach(cls => {
-          const count = currentEvents.filter(e => e.classes.includes(cls)).length;
-          const btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = `cs-filter-chip${activeClasses.has(cls) ? " is-active" : ""}`;
-          btn.textContent = `${displayClassName(cls)} (${count})`;
-          btn.addEventListener("click", () => {
-            if (activeClasses.has(cls)) activeClasses.delete(cls);
-            else activeClasses.add(cls);
-            syncView();
-          });
-          classFiltersEl.appendChild(btn);
-        });
-      }
-
-      function renderTable() {
-        if (visibleEvents.length === 0) {
-          resultsTableBody.innerHTML = '<tr><td colspan="6" class="cs-empty">No frames match the current filters.</td></tr>';
-          tableMetaEl.textContent = "0 rows";
-          return;
-        }
-
-        tableMetaEl.textContent = `${visibleEvents.length} rows`;
-        resultsTableBody.innerHTML = visibleEvents.map((e, i) => `
-          <tr data-row-index="${i}" class="${selectedFrameId === e.frame_id ? "is-selected" : ""}">
-            <td><strong>${e.frame_id}</strong></td>
-            <td><div class="cs-class-tags">${e.classes.map(cls => `<span class="cs-class-tag">${displayClassName(cls)}</span>`).join("")}</div></td>
-            <td>${e.detections}</td>
-            <td>${Number(e.lat).toFixed(5)}</td>
-            <td>${Number(e.lon).toFixed(5)}</td>
-            <td><button type="button" class="view-img-btn" data-view-frame="1" data-idx="${i}">View RGB / Depth</button></td>
-          </tr>
-        `).join("");
+      function markerStyle(hasDet) {
+        return hasDet
+          ? { radius: 5, weight: 1, color: "#0c1a2a", fillColor: "#0c1a2a", fillOpacity: 0.9 }
+          : { radius: 3, weight: 1, color: "#0c1a2a", fillColor: "#0c1a2a", fillOpacity: 0.35 };
       }
 
       function renderMarkers() {
         layer.clearLayers();
-        map.invalidateSize();
 
-        if (visibleEvents.length === 0) {
-          statusEl.textContent = "No matching frames";
+        if (currentEvents.length === 0) {
+          statusEl.textContent = "No events to display";
           return;
         }
 
-        statusEl.textContent = `${visibleEvents.length} frames shown`;
+        statusEl.textContent = `${currentEvents.length} frames`;
 
-        for (let i = 0; i < visibleEvents.length; i++) {
-          const e = visibleEvents[i];
+        for (let i = 0; i < currentEvents.length; i++) {
+          const e = currentEvents[i];
           const detCount = Number(e.detections || 0);
+          const hasDet = detCount > 0;
+          const imgUrl = e.thumb || `images/frames/${pad6(e.frame_id)}.jpg`;
+          const detPayload = encodeURIComponent(JSON.stringify(e.det_list || []));
 
           const popupHtml = `
             <div style="min-width:240px">
               <div><b>Frame:</b> ${e.frame_id}</div>
-              <div><b>Classes:</b> ${e.classes.map(displayClassName).join(", ")}</div>
               <div><b>Detections:</b> ${detCount}</div>
               <div><b>GPS:</b> ${Number(e.lat).toFixed(6)}, ${Number(e.lon).toFixed(6)}</div>
               <button type="button" class="view-img-btn"
@@ -1336,40 +987,21 @@
             </div>
           `;
 
-          L.circleMarker([e.lat, e.lon], markerStyle(e))
+          L.circleMarker([e.lat, e.lon], markerStyle(hasDet))
             .bindPopup(popupHtml)
             .addTo(layer);
         }
 
-        const bounds = computeBounds(visibleEvents);
+        const bounds = computeBounds(currentEvents);
         if (bounds) map.fitBounds(bounds.pad(0.2));
       }
 
-      function updateStats() {
-        visibleFramesStatEl.textContent = String(visibleEvents.length);
-        visibleDetectionsStatEl.textContent = String(countDetections(visibleEvents));
-        activeClassesStatEl.textContent = String(activeClasses.size || availableClasses.length);
-      }
-
-      function syncView() {
-        visibleEvents = getFilteredEvents();
-        if (!visibleEvents.some(e => e.frame_id === selectedFrameId)) {
-          selectedFrameId = null;
-        }
-        renderClassFilters();
-        updateStats();
-        renderMarkers();
-        renderTable();
-      }
-
       function showFrameAtIndex(i) {
-        if (i < 0 || i >= visibleEvents.length) return;
+        if (i < 0 || i >= currentEvents.length) return;
         currentIndex = i;
 
-        const e = visibleEvents[i];
-        selectedFrameId = e.frame_id;
-        lastDetectionsForOverlay = getModalDetectionsForEvent(e);
-        renderTable();
+        const e = currentEvents[i];
+        lastDetectionsForOverlay = Array.isArray(e.det_list) ? e.det_list : [];
 
         openModal(`Frame ${e.frame_id} (${e.npz || ""})`);
         renderDetStrip(lastDetectionsForOverlay);
@@ -1397,7 +1029,7 @@
         depthImg.src = depthUrl;
 
         if (prevBtn) prevBtn.disabled = (i === 0);
-        if (nextBtn) nextBtn.disabled = (i === visibleEvents.length - 1);
+        if (nextBtn) nextBtn.disabled = (i === currentEvents.length - 1);
       }
 
       prevBtn.addEventListener("click", () => showFrameAtIndex(currentIndex - 1));
@@ -1413,15 +1045,6 @@
         const btn = evt.target.closest("[data-view-frame]");
         if (!btn) return;
         const idx = Number(btn.getAttribute("data-idx"));
-        if (!Number.isFinite(idx)) return;
-        showFrameAtIndex(idx);
-      });
-
-      resultsTableBody.addEventListener("click", (evt) => {
-        if (evt.target.closest("[data-view-frame]")) return;
-        const row = evt.target.closest("[data-row-index]");
-        if (!row) return;
-        const idx = Number(row.getAttribute("data-row-index"));
         if (!Number.isFinite(idx)) return;
         showFrameAtIndex(idx);
       });
@@ -1446,11 +1069,12 @@
       sel.innerHTML = '<option value="all">All datasets</option>' +
         allDatasets.map(d => `<option value="${d.id}">${d.name}</option>`).join("");
 
+      const controlRow = document.querySelector(".cs-control-row");
       const dropdownWrapper = document.createElement("div");
       dropdownWrapper.className = "cs-select-wrap";
-      dropdownWrapper.innerHTML = '<label for="datasetSelect" style="font-weight:600;">Demo:</label>';
+      dropdownWrapper.innerHTML = '<label for="datasetSelect" style="font-weight:600;">Filter by:</label>';
       dropdownWrapper.appendChild(sel);
-      datasetSelectMount.replaceWith(dropdownWrapper);
+      controlRow.insertBefore(dropdownWrapper, controlRow.firstChild);
 
       async function loadDataset(datasetId) {
         currentDatasetId = datasetId;
@@ -1469,9 +1093,7 @@
             }
           }
           currentEvents = out;
-          availableClasses = Array.from(new Set(currentEvents.flatMap(e => e.classes))).sort();
-          activeClasses = new Set();
-          syncView();
+          renderMarkers();
           return;
         }
 
@@ -1489,9 +1111,7 @@
           currentEvents = [];
         }
 
-        availableClasses = Array.from(new Set(currentEvents.flatMap(e => e.classes))).sort();
-        activeClasses = new Set();
-        syncView();
+        renderMarkers();
       }
 
       sel.addEventListener("change", async () => {
@@ -1500,7 +1120,6 @@
 
       // Initial load
       await loadDataset("all");
-      setTimeout(() => map.invalidateSize(), 120);
     })();
   </script>
 </body>
