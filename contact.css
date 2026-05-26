@@ -1,0 +1,304 @@
+/* =========================================================
+   Contact Page — modern split layout, black & white
+========================================================= */
+
+:root {
+  --ct-dark: #111111;
+  --ct-white: #ffffff;
+  --ct-muted: rgba(255, 255, 255, 0.55);
+  --ct-border-dark: rgba(255, 255, 255, 0.12);
+  --ct-border-light: rgba(0, 0, 0, 0.1);
+  --ct-ink: #111111;
+}
+
+/* =========================================================
+   Section wrapper
+========================================================= */
+
+.ct-section {
+  padding: 72px 0 100px;
+}
+
+.ct-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* =========================================================
+   Split grid
+========================================================= */
+
+.ct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================================================
+   Left — dark info panel
+========================================================= */
+
+.ct-info {
+  background: var(--ct-dark);
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ct-info h3 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--ct-white);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.ct-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ct-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--ct-border-dark);
+}
+
+.ct-list li:first-child {
+  border-top: 1px solid var(--ct-border-dark);
+}
+
+.ct-list i {
+  color: var(--ct-white);
+  font-size: 15px;
+  opacity: 0.5;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.ct-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ct-muted);
+  margin-bottom: 5px;
+}
+
+.ct-link {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--ct-white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ct-border-dark);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.ct-link:hover {
+  opacity: 0.75;
+}
+
+.ct-address {
+  font-style: normal;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ct-white);
+}
+
+.ct-text {
+  font-size: 0.95rem;
+  color: var(--ct-white);
+}
+
+/* =========================================================
+   Right — white form panel
+========================================================= */
+
+.ct-form {
+  background: var(--ct-white);
+  padding: 56px 48px;
+}
+
+.ct-form h3 {
+  margin: 0 0 6px;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--ct-ink);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.ct-form-sub {
+  margin: 0 0 32px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.ct-form-el {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ct-row {
+  display: flex;
+  gap: 16px;
+}
+
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.ct-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.ct-field input,
+.ct-field textarea {
+  padding: 13px 16px;
+  border: 1.5px solid var(--ct-border-light);
+  border-radius: 10px;
+  background: #fafafa;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--ct-ink);
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.ct-field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.ct-field input:focus,
+.ct-field textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: #111;
+}
+
+/* Footer under form */
+.ct-footer {
+  padding-top: 20px;
+  border-top: 1.5px solid var(--ct-border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ct-consent {
+  font-size: 0.84rem;
+  color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.ct-consent input { margin-top: 2px; }
+
+.ct-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ct-submit {
+  background: var(--ct-ink);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 13px 28px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.ct-submit:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.ct-alt {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.88rem;
+}
+
+.ct-success {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: #f4f4f4;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+  color: #111;
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 860px) {
+  .ct-grid {
+    grid-template-columns: 1fr;
+    border-radius: 16px;
+  }
+  .ct-info,
+  .ct-form {
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .ct-row { flex-direction: column; }
+  .ct-section { padding: 48px 0 72px; }
+  .ct-container { padding: 0 16px; }
+}
+
+/* =========================================================
+   Reveal
+========================================================= */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+[data-reveal].in-view,
+[data-reveal].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

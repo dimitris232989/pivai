@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="images/pivai_favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Pivai</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preload" href="assets/office.jpg" as="image" />
+
+  <!-- Global + About only (keeps this page clean + avoids overrides) -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="news.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-grid" id="headerGrid">
+      <a class="brand" href="index.html" aria-label="Pivai home">
+        <img src="images/newlogo.png" alt="Pivai logo" />
+      </a>
+
+      <nav class="primary-nav" role="navigation" aria-label="Main Navigation">
+        <ul class="menu" role="menubar">
+
+          <!-- COMPANY -->
+          <li class="menu-item mega" role="none">
+            <button class="dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              <span class="label">Company</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="mega-panel" role="menu" aria-label="Company">
+              <div class="mega3">
+                <div class="col intro">
+                  <h3>Company</h3>
+                  <p>Pioneering AI-powered infrastructure with a global vision.</p>
+                </div>
+
+                <div class="col links">
+                  <a class="mega-link is-active" href="about.html" data-preview-img="images/newlogo.png"
+                    data-preview-title="About Us" data-preview-desc="Who we are, what we do, and how we build.">About
+                    Us</a>
+
+                  <a class="mega-link" href="team.html" data-preview-img="images/newlogo.png"
+                    data-preview-title="Our people"
+                    data-preview-desc="Meet the leadership and the builders behind PivaiTech.">Our Team</a>
+
+                  <a class="mega-link" href="news.html" data-preview-img="images/newlogo.png"
+                    data-preview-title="News & Events"
+                    data-preview-desc="Discover the latest announcements and where to meet us.">News & Events</a>
+
+                  <a class="mega-link" href="careers.html" data-preview-img="images/newlogo.png"
+                    data-preview-title="Careers"
+                    data-preview-desc="Help us design the next decade of intelligent infrastructure.">Careers</a>
+                </div>
+
+                <div class="col preview">
+                  <figure>
+                    <img src="images/newlogo.png" alt="Pivai logo">
+                    <figcaption>
+                      <h4>About Us</h4>
+                      <p>Who we are, what we do, and how we build.</p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- PRODUCTS -->
+          <li class="menu-item mega" role="none">
+            <button class="dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              <span class="label">Product</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="mega-panel" role="menu" aria-label="Product">
+              <div class="mega3">
+                <div class="col links">
+                  <a class="mega-link is-active" href="signmap.html" data-preview-img="images/sign3.png"
+                    data-preview-title="Signmap"
+                    data-preview-desc="Real-time infrastructure perception powered by AI.">Signmap</a>
+                </div>
+
+                <div class="col preview">
+                  <figure>
+                    <img src="images/sign3.png" alt="">
+                    <figcaption>
+                      <p>Real-time infrastructure perception powered by AI.</p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- CASE STUDIES -->
+          <li class="menu-item" role="none">
+            <a class="dropdown-toggle" href="case-studies.html">Case Studies</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="right-controls">
+
+        <a class="btn ghost" href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="rule rule-header"></div>
+
+    <div class="tagline c-tagline">
+      <div class="tagline-inner c-tagline-inner">
+        <h1 class="c-title">Our Company.</h1>
+        <p class="c-subtitle">We build real-time AI to make infrastructure safer, smarter, and more sustainable.</p>
+      </div>
+    </div>
+
+    <div class="rule rule-tagline"></div>
+  </header>
+
+  <section class="hero" aria-label="Company hero background">
+    <div class="overlay" aria-hidden="true"></div>
+  </section>
+
+  <main>
+    <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span class="current">Company</span>
+      <span>›</span>
+      <span class="current">About Us</span>
+    </nav>
+
+    <section class="about-editorial" data-reveal>
+      <div class="ae-inner">
+        <div class="ae-left">
+          <h2>We build AI that makes infrastructure safer, smarter, and more resilient.</h2>
+        </div>
+        <div class="ae-right">
+          <p class="ae-lead">PIVAI develops AI-driven inspection technologies that redefine how infrastructure is monitored and maintained. We design complete systems - from sensing hardware to AI models and data pipelines - that turn field data into reliable engineering insights.</p>
+          <div class="ae-block">
+            <h3>Our Mission</h3>
+            <p>To enable safer, smarter, and more resilient infrastructure through real-time intelligence. We deliver actionable insights directly from the field, reducing reliance on manual inspections and accelerating maintenance decisions.</p>
+          </div>
+          <div class="ae-block">
+            <h3>Proprietary Technologies</h3>
+            <p>PIVAI’s platform integrates sensor hardware, edge AI, and scalable data infrastructure into a unified system. From acquisition to inference to reporting, every component is engineered to convert raw data into actionable intelligence, in real time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-links-band" data-reveal aria-labelledby="quick-links-heading">
+      <h2 id="quick-links-heading" class="visually-hidden">Explore</h2>
+
+      <div class="ql-grid">
+        <article class="ql-item">
+          <h2 class="ql-title">Our Team</h2>
+          <p class="ql-copy">Meet the people shaping PivaiTech’s mission.</p>
+          <a class="ql-link" href="team.html">Meet the team</a>
+        </article>
+
+        <article class="ql-item ql-item--right">
+          <h2 class="ql-title">News & Events</h2>
+          <p class="ql-copy">Product updates, partnerships, and conferences.</p>
+          <a class="ql-link" href="news.html">See latest news</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="get-in-touch" data-reveal>
+      <div class="get-in-touch__inner">
+        <h2>Let’s Get in Touch</h2>
+        <p>
+          Have questions or want to explore collaboration opportunities?
+          We’d love to hear from you.
+        </p>
+        <a href="contact.html" class="btn-ghost">Get in Touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (keep your existing footer as-is) -->
+  <footer class="footer" data-reveal>
+    <div class="footer-top">
+      <div>
+        <h4>Let's Connect</h4>
+        <p>Interested in a partnership or demo? Reach out to us.</p>
+        <a href="contact.html" class="btn">Contact Us</a>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="signmap.html">SignMap</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Case Studies</h4>
+        <ul>
+          <li><a href="case-studies.html">Explore</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-col logo-col">
+        <a href="index.html" aria-label="PivaiTech home">
+          <img src="images/newlogo.png" alt="PivaiTech Logo">
+        </a>
+      </div>
+
+      <div class="footer-col text-col">
+        <p>&copy; 2025 Pivai. All rights reserved.</p>
+      </div>
+
+      <div class="footer-col social-col" aria-label="Social links">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+  <script>
+    var y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

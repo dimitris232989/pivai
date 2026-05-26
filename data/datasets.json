@@ -1,0 +1,10 @@
+[
+  {
+    "id": "Charleston-demo",
+    "name": "Charleston, SC",
+    "description": "AI-powered road inspection field demo in Charleston, South Carolina.",
+    "tag": "Road Inspection · 2024",
+    "events_path": "data/charleston/events.jsonl",
+    "images_path": "data/charleston/jpeg"
+  }
+]

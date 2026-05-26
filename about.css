@@ -1,0 +1,250 @@
+/* =========================================================
+   PivaiTech — About Page Styles
+   ========================================================= */
+
+
+/* =========================================================
+   0) Reveal helper
+   ========================================================= */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .75s ease, transform .75s ease;
+}
+
+[data-reveal].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* =========================================================
+   0.5) CSS Variables
+   ========================================================= */
+:root {
+  --about-dark:    #0c1a2a;
+  --about-ink:     #111111;
+  --about-muted:   #5a6a7a;
+  --about-border:  rgba(12, 26, 42, 0.08);
+  --about-radius:  14px;
+  --about-max:     1200px;
+  --about-h2:      clamp(26px, 2.8vw, 36px);
+  --about-h3:      clamp(19px, 2.1vw, 26px);
+  --about-p:       16px;
+  --about-lh:      1.75;
+}
+
+
+/* =========================================================
+   1) Editorial split layout
+   ========================================================= */
+.about-editorial {
+  padding: clamp(80px, 10vw, 140px) 5%;
+  max-width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.ae-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(48px, 8vw, 120px);
+  align-items: start;
+}
+
+.ae-left h2 {
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: #0c1a2a;
+  margin: 0;
+  position: sticky;
+  top: 100px;
+}
+
+.ae-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ae-lead {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #33445a;
+  margin: 0;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(12, 26, 42, .08);
+}
+
+.ae-block h3 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #111111;
+  margin: 0 0 12px;
+}
+
+.ae-block p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #5a6a7a;
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .ae-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .ae-left h2 {
+    position: static;
+  }
+}
+
+/* =========================================================
+   2) Video banner
+   ========================================================= */
+.about-video {
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about-video__el {
+  width: 100%;
+  height: clamp(280px, 45vw, 520px);
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =========================================================
+   4) Quick Links Band (minimal)
+   ========================================================= */
+.quick-links-band {
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, .06);
+  border-bottom: 1px solid rgba(0, 0, 0, .06);
+  padding: 36px 0;
+}
+
+.ql-grid {
+  max-width: var(--container, 1280px);
+  margin: 0 auto;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 4vw, 32px);
+}
+
+.ql-item {
+  padding: 12px 0;
+  text-align: center;
+}
+
+.ql-item--right {
+  border-left: 1px solid rgba(0, 0, 0, .08);
+  padding-left: clamp(20px, 4vw, 28px);
+}
+
+.ql-title {
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-size: var(--about-h3);
+  letter-spacing: -0.01em;
+  color: #0c1a2a;
+}
+
+.ql-copy {
+  font-size: var(--about-p);
+  line-height: var(--about-lh);
+  color: #33445a;
+  margin: 0 0 14px;
+}
+
+.ql-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0c1a2a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ql-link::after {
+  content: "→";
+  transition: transform .18s ease;
+}
+
+.ql-link:hover::after,
+.ql-link:focus-visible::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 860px) {
+  .ql-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ql-item--right {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(0, 0, 0, .08);
+    padding-top: 16px;
+  }
+}
+
+
+/* =========================================================
+   5) Get in Touch (clean center block)
+   ========================================================= */
+.get-in-touch {
+  padding: clamp(64px, 7vw, 96px) 28px;
+}
+
+.get-in-touch__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.get-in-touch__inner h2 {
+  margin: 0 0 12px;
+  font-weight: 600;
+  font-size: var(--about-h2);
+  letter-spacing: -0.01em;
+  color: #0c1a2a;
+}
+
+.get-in-touch__inner p {
+  font-size: var(--about-p);
+  line-height: var(--about-lh);
+  color: #33445a;
+  margin: 0 auto 22px;
+  max-width: 72ch;
+}
+
+
+
+/* =========================================================
+   6) Utilities
+   ========================================================= */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
